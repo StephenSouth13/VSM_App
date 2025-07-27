@@ -20,7 +20,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
   };
 
   return (
-    <LinearGradient colors={['#c2e59c', '#64b3f4']} style={styles.container}>
+    <View style={[styles.container, { backgroundColor: 'white' }]}>
       <Text style={styles.title}>Quên mật khẩu</Text>
       <Text style={styles.description}>Nhập email để nhận hướng dẫn đặt lại mật khẩu.</Text>
 
@@ -33,7 +33,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={styles.link}>Quay lại đăng nhập</Text>
       </TouchableOpacity>
-    </LinearGradient>
+    </View>
   );
 };
 

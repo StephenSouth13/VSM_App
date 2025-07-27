@@ -25,7 +25,7 @@ const RegisterScreen = ({ navigation }) => {
   };
 
   return (
-    <LinearGradient colors={['#2193b0', '#6dd5ed']} style={styles.container}>
+    <View style={[styles.container, { backgroundColor: 'white' }]}>
       <Text style={styles.title}>Đăng ký</Text>
 
       <CustomInput placeholder="Email" value={email} setValue={setEmail} />
@@ -39,7 +39,7 @@ const RegisterScreen = ({ navigation }) => {
       <TouchableOpacity onPress={() => navigation.navigate('Login')}>
         <Text style={styles.link}>Đã có tài khoản? Đăng nhập</Text>
       </TouchableOpacity>
-    </LinearGradient>
+    </View>
   );
 };
 

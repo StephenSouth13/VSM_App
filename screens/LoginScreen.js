@@ -20,7 +20,8 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
-    <LinearGradient colors={['#43e97b', '#38f9d7']} style={styles.container}>
+    <View style={[styles.container, { backgroundColor: 'white' }]}>
+
       <Image source={require('../assets/logo.png')} style={styles.logo} />
       <Text style={styles.title}>Đăng nhập</Text>
 
@@ -38,7 +39,7 @@ const LoginScreen = ({ navigation }) => {
       <TouchableOpacity onPress={() => navigation.navigate('Register')}>
         <Text style={styles.link}>Chưa có tài khoản? Đăng ký</Text>
       </TouchableOpacity>
-    </LinearGradient>
+    </View>
   );
 };
 
