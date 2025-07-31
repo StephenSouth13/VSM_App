@@ -1,3 +1,4 @@
+//screens/ForgotPasswordScreen.js
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import CustomInput from '../components/CustomInput';

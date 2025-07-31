@@ -11,13 +11,14 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const onLogin = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigation.navigate('Home');
-    } catch (error) {
-      Alert.alert('Lỗi đăng nhập', error.message);
-    }
-  };
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    navigation.replace('MainApp'); // ✅ chuyển sang tab, không quay lại login
+  } catch (error) {
+    Alert.alert('Lỗi đăng nhập', error.message);
+  }
+};
+
 
   return (
     <View style={[styles.container, { backgroundColor: 'white' }]}>

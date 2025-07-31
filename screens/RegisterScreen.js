@@ -1,3 +1,4 @@
+//screens/RegisterScreen.js
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import CustomInput from '../components/CustomInput';
@@ -32,9 +33,15 @@ const RegisterScreen = ({ navigation }) => {
       <CustomInput placeholder="Mật khẩu" value={password} setValue={setPassword} secureTextEntry />
       <CustomInput placeholder="Xác nhận mật khẩu" value={confirm} setValue={setConfirm} secureTextEntry />
 
-      <TouchableOpacity style={styles.button} onPress={onRegister}>
-        <Text style={styles.buttonText}>Tạo tài khoản</Text>
-      </TouchableOpacity>
+      <TouchableOpacity onPress={onRegister}>
+  <LinearGradient
+    colors={['#00c6ff', '#0072ff']}
+    style={styles.button}
+  >
+    <Text style={styles.buttonText}>Tạo tài khoản</Text>
+  </LinearGradient>
+</TouchableOpacity>
+
 
       <TouchableOpacity onPress={() => navigation.navigate('Login')}>
         <Text style={styles.link}>Đã có tài khoản? Đăng nhập</Text>
